@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F22</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Culture Data Inventory Tracker" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button id="go-home-btn" class="btn primary-btn">Go to Principale</button>
+        
+        <div class="sheet-selector">
+          <div>
+            <label for="sheet-select" class="label">LA CULTURE:</label>
+            <select id="sheet-select" class="select">
+              <option value="https://script.google.com/macros/s/AKfycbzIDskX4DVrSLi5vG4JDmM7QbQzJ2BOPDbFif_PcE83zJnaNb5g_1hXJHYVZFKg6x6J/exec">CEBOLLINO</option>
+              
+            </select>
+          </div>
+          <button id="add-data-btn" class="btn primary-btn">Ajouter</button>
+        </div>
+      </div>
+
+      <!-- Form container, initially hidden -->
+      <div id="form-container" class="form-container hidden">
+        <form id="inventory-form" class="inventory-form">
+          <div class="form-header">
+            <div class="date-picker">
+              <label for="date-input" class="label">Date:</label>
+              <input type="date" id="date-input" class="input" required />
+            </div>
+            
+            <button type="button" id="add-row-btn" class="btn outline-btn">
+              <span class="icon">+</span> 
+            </button>
+          </div>
+
+          <div class="table-container">
+            <div class="table-header">
+              <div>PARCELLES</div>
+              <div>FINI/BRUT</div>
+              <div>TOTAL BRUT</div>
+              <div>TOTAL FINI</div>
+              <div>SUPERFICIE</div>
+              <div>COUPE</div>
+              <div></div>
+            </div>
+            
+            <div id="form-rows" class="form-rows">
+              <!-- Form rows will be added here -->
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="cancel-btn" class="btn outline-btn">Annuler</button>
+            <button type="submit" class="btn primary-btn">Envoyer</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Table container -->
+      <div id="data-table-container" class="data-table-container">
+        <!-- Data table will be rendered here -->
+      </div>
+    </div>
+
+    <!-- Toast container for notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="utils.js"></script>
+    <script src="inventory.js"></script>
+  </body>
+</html>
