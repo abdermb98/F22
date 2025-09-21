@@ -187,30 +187,31 @@ function renderFormRows() {
           class="select"
           required
         >
-          <option value="P40 CEBOLLINO">P40 CEBOLLINO</option>
-          <option value="P41 CEBOLLINO">P41 CEBOLLINO</option>
-          <option value="P42 CEBOLLINO">P42 CEBOLLINO</option>
-          <option value="P43 CEBOLLINO">P43 CEBOLLINO</option>
-          <option value="P44 CEBOLLINO">P44 CEBOLLINO</option>
-          <option value="P45 HABANERO">P45 HABANERO</option>
-          <option value="P46 CEBOLLINO">P46 CEBOLLINO</option>
-          <option value="P47 CEBOLLINO">P47 CEBOLLINO</option>
-          <option value="P48 ESTRAGON">P48 ESTRAGON</option>
-          <option value="P49 CEBOLLINO">P49 CEBOLLINO</option>
-          <option value="P50 CEBOLLINO">P50 CEBOLLINO</option>
-          <option value="P51 CEBOLLINO">P51 CEBOLLINO</option>
-          <option value="P52 ESTRAGON">P52 ESTRAGON</option>
-          <option value="P53 ESTRAGON">P53 ESTRAGON</option>
-          <option value="P54 CEBOLLINO">P54 CEBOLLINO</option>
-          <option value="P55 CEBOLLINO">P55 CEBOLLINO</option>
-          <option value="P56 CEBOLLINO">P56 CEBOLLINO</option>
-          <option value="P57 CEBOLLINO">P57 CEBOLLINO</option>
-          <option value="P58 CEBOLLINO">P58 CEBOLLINO</option>
-          <option value="P59 CEBOLLINO">P59 CEBOLLINO</option>
-          <option value="P60 CEBOLLINO">P60 CEBOLLINO</option>
-          <option value="P61 CEBOLLINO">P61 CEBOLLINO</option>
-          <option value="P62 CEBOLLINO">P62 CEBOLLINO</option>
-          <option value="P63 CEBOLLINO">P63 CEBOLLINO</option>
+
+          <option value="P01 CEBOLLINO">P01 CEBOLLINO</option>
+          <option value="P02 CEBOLLINO">P02 CEBOLLINO</option>
+          <option value="P03 CEBOLLINO">P03 CEBOLLINO</option>
+          <option value="P04 CEBOLLINO">P04 CEBOLLINO</option>
+          <option value="P05 CEBOLLINO">P05 CEBOLLINO</option>
+          <option value="P06 CEBOLLINO">P06 CEBOLLINO</option>
+          <option value="P07 CEBOLLINO">P07 CEBOLLINO</option>
+          <option value="P08 CEBOLLINO">P08 CEBOLLINO</option>
+          <option value="P09 CEBOLLINO">P09 CEBOLLINO</option>
+          <option value="P10 CEBOLLINO">P10 CEBOLLINO</option>
+          <option value="P11 CEBOLLINO">P11 CEBOLLINO</option>
+          <option value="P12 CEBOLLINO">P12 CEBOLLINO</option>
+          <option value="P13 CEBOLLINO">P13 CEBOLLINO</option>
+          <option value="P14 CEBOLLINO">P14 CEBOLLINO</option>
+          <option value="P15 CEBOLLINO">P15 CEBOLLINO</option>
+          <option value="P16 CEBOLLINO">P16 CEBOLLINO</option>
+          <option value="P17 CEBOLLINO">P17 CEBOLLINO</option>
+          <option value="P18 CEBOLLINO">P18 CEBOLLINO</option>
+          <option value="P19 CEBOLLINO">P19 CEBOLLINO</option>
+          <option value="P20 CEBOLLINO">P20 CEBOLLINO</option>
+          <option value="P65 CEBOLLINO">P65 CEBOLLINO</option>
+          <option value="P66 CEBOLLINO">P66 CEBOLLINO</option>
+          <option value="P67 CEBOLLINO">P67 CEBOLLINO</option>
+          <option value="P68 CEBOLLINO">P68 CEBOLLINO</option>
         </select>
       </div>
       
@@ -269,6 +270,9 @@ function renderFormRows() {
           <option value="COUPE 5">COUPE 5</option>
           <option value="COUPE 6">COUPE 6</option>
           <option value="COUPE 7">COUPE 7</option>
+          <option value="COUPE 8">COUPE 8</option>
+          <option value="COUPE 9">COUPE 9</option>
+          <option value="COUPE 10">COUPE 10</option>
         </select>
       </div>
       
@@ -459,18 +463,19 @@ async function sendTelegramNotification(data) {
   const chatId = "-1002935363580";
 
   const message1 =
-    `📅 *Date* : ${data.date}\n` +
-    `🌱 *Parcelle* : ${data.parcelle}\n` +
-    `📦 *Type* : ${data.type}\n` +
-    `🌾 *Superficie* : ${data.superficie} m²\n` +
-    `⚖️ *Brut* : ${data.brut} kg\n` +
-    `📊 *R. Brut* : ${data.rBrut} kg/m²\n`;
+    `*Finca 22*  \n` +
+    `*Date* : ${data.date}\n` +
+    `*Parcelle* : ${data.parcelle}\n` +
+    `*Type* : ${data.type}\n` +
+    `*Superficie* : ${data.superficie} m²\n` +
+    `*Brut* : ${data.brut} kg\n` +
+    `*R. Brut* : ${data.rBrut} kg/m²\n`;
 
   const message2 =
     message1 +
-    `✅ *Fini* : ${data.fini} kg\n` +
-    `📊 *R. Fini* : ${data.rFini} kg/m²\n` +
-    `📉 *Écart* : ${data.ecart}`;
+    `*Fini* : ${data.fini} kg\n` +
+    `*R. Fini* : ${data.rFini} kg/m²\n` +
+    `*Écart* : ${data.ecart}`;
 
   const finalMessage = data.type === "BRUT" ? message1 : message2;
 
